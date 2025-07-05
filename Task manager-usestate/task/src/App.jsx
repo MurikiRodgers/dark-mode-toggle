@@ -1,10 +1,10 @@
 import React from 'react'
-import TaskManager from './components/TaskManager'
+import TaskManagerReducer from './components/TaskManagerReducer'
 
 const App = () => {
   return (
     <div>
-      <TaskManager/> 
+      <TaskManagerReducer/> 
     </div>
   )
 }

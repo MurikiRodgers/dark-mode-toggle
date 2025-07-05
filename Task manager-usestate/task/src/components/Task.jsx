@@ -1,21 +1,24 @@
 import React from 'react'
 import {FaCheckDouble, FaEdit, FaTrashAlt} from "react-icons/fa"
 
-const Task = ({name, id, date, complete}) => {
+const Task = ({completeTask, deleteTask, editTask, name, id, date, complete}) => {
   return (
-    <div className={complete ? "task complete": "task"}>
+    <div key={id} className={complete ? "task complete": "task"}>
       <span>
         <p><b>Task:</b>{name}</p>
         <p><b>Date:</b>{date}</p>
       </span>
       <span>
-      <button>
+      <button onClick={()=> editTask(id)}>
         <FaEdit color="green"/>
       </button>
-        <button>
+        <button onClick={()=>deleteTask(id)}>
         <FaTrashAlt color= "red"/>
       </button>
-        <button>
+        <button onClick={() => {
+          completeTask(id)
+        }
+        }>
         <FaCheckDouble color= "purple"/>
       </button>
       </span>
