@@ -1,0 +1,6 @@
+.btn{
+    background-color: transparent;
+}
+.btn:hover{
+    background-color: orangered;
+}
